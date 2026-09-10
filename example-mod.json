@@ -1,0 +1,13 @@
+{
+  "name": "Turbo Builder",
+  "description": "Faster movement, faster mining, and two custom luminous blocks.",
+  "effects": {
+    "moveSpeed": 1.25,
+    "breakSpeed": 1.8,
+    "jumpScale": 1.1
+  },
+  "blocks": [
+    {"name":"Plasma","color":"#8b5cff","hardness":1.2,"emissive":true},
+    {"name":"Reactor","color":"#ff4fd8","hardness":2.2,"emissive":true}
+  ]
+}
