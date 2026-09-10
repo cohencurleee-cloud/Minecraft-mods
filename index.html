@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#07111d" />
+  <title>VoxelForge</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div id="game"></div>
+
+  <div id="boot" class="screen">
+    <div class="boot-card glass">
+      <div class="eyebrow">BROWSER VOXEL SANDBOX</div>
+      <h1>VOXEL<span>FORGE</span></h1>
+      <p>Procedural world. Building. Mobs. Survival systems. Real mod hooks.</p>
+      <button id="playBtn" class="primary">ENTER WORLD</button>
+      <div class="boot-meta"><span>WASD / touch</span><span>Break + place</span><span>Autosave</span></div>
+    </div>
+  </div>
+
+  <div id="hud" class="hidden">
+    <div class="topbar">
+      <div class="brand-mini">VF</div>
+      <div id="statusPill" class="status-pill">DAY 1 · 12:00</div>
+      <button id="modsBtn" class="icon-btn">MODS</button>
+    </div>
+
+    <div id="crosshair" class="crosshair"><i></i><b></b></div>
+    <div id="breakRing" class="break-ring"><div></div></div>
+
+    <div class="health-wrap glass-lite">
+      <div class="health-label"><span>HEALTH</span><span id="healthText">100</span></div>
+      <div class="health-track"><div id="healthFill"></div></div>
+    </div>
+
+    <div id="hotbar" class="hotbar"></div>
+    <div id="coords" class="coords">0 0 0</div>
+
+    <div id="mobileControls" class="mobile-controls">
+      <div id="joystick" class="joystick"><div id="stick"></div></div>
+      <div id="lookZone" class="look-zone"></div>
+      <div class="action-stack">
+        <button id="jumpBtn" class="action-btn jump">↑</button>
+        <button id="breakBtn" class="action-btn">BREAK</button>
+        <button id="placeBtn" class="action-btn">PLACE</button>
+      </div>
+    </div>
+
+    <div id="damageFlash"></div>
+    <div id="toast" class="toast"></div>
+  </div>
+
+  <aside id="modPanel" class="panel">
+    <div class="panel-head">
+      <div><div class="eyebrow">WORLD EXTENSIONS</div><h2>Mods</h2></div>
+      <button id="closeMods" class="close-btn">×</button>
+    </div>
+    <div id="modList" class="mod-list"></div>
+    <div class="panel-divider"></div>
+    <label class="import-btn">
+      <input id="modFile" type="file" accept="application/json,.json" hidden />
+      IMPORT MOD.JSON
+    </label>
+    <p class="panel-note">Custom mods can add blocks and tune approved gameplay values without running random code.</p>
+  </aside>
+
+  <div id="pause" class="pause-card glass hidden">
+    <div class="eyebrow">PAUSED</div>
+    <h2>Click to resume</h2>
+    <p>Press ESC to release your mouse.</p>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
